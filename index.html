@@ -15,65 +15,72 @@
 
     <!-- Sign-up form start -->
     <div class=content>
-      <section class="signUp">
-        <h1 class="headerColor signUpHeaderSize">
-          Stay updated!
-        </h1>
+      <div id = "signUpContent" class="signUpPage content">
+        <section class="signUp">
+          <h1 class="headerColor signUpHeaderSize">
+            Stay updated!
+          </h1>
 
-        <p>
-          Join 60,000+ product managers receiving monthly updates on:
-        </p>
-        <ul>
-          <li>
-            <p class="benefitsP">
-              Product discovery and building what matters
-            </p>
-          </li>
-          <li>
-            <p class="benefitsP">
-              Measuring to ensure updates are a success
-            </p>
-          </li>
-          <li>
-            <p >
-              And much more!
-            </p>
-          </li>
-        </ul>
-        <div class="signUpContainer">
-          
-          <div class="emailContainer">
-            <h2 class="headerColor emailHeader">
-              Email address
-            </h2>
-            <h2 id="emailErrorMessage" class="errorColor errorHidden">
-              Valid email required. 
-            </h2>
+          <p>
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul>
+            <li>
+              <p class="benefitsP">
+                Product discovery and building what matters
+              </p>
+            </li>
+            <li>
+              <p class="benefitsP">
+                Measuring to ensure updates are a success
+              </p>
+            </li>
+            <li>
+              <p class="benefitsP">
+                And much more!
+              </p>
+            </li>
+          </ul>
+          <div class="signUpContainer">
+            
+            <div class="emailContainer">
+              <h2 class="headerColor emailHeader">
+                Email address
+              </h2>
+              <h2 id="emailErrorMessage" class="errorColor errorHidden emailHeader">
+                Valid email required
+              </h2>
+            </div>
+            <input id="emailInput" type="email" for="email sign up" placeholder="email@company.com">
           </div>
-          <input id="emailInput" type="email" for="email sign up" placeholder="email@company.com">
+
+          <button id="subscribeButton" class="button">
+            Subscribe to monthly newsletter
+          </button>
+        </section>
+
+        <div class="pictureContainer">
+          <picture> 
+            <source media="(max-width: 550px)" srcset="assets/images/illustration-sign-up-mobile.svg">
+            <img class="signUpImage" src="assets/images/illustration-sign-up-desktop.svg" alt="sign-up-dekstop">
+          </picture>
         </div>
-
-        <button>
-          Subscribe to monthly newsletter
-        </button>
-      </section>
-
-      <div>
-        <img class="signUpImage" src="assets/images/illustration-sign-up-desktop.svg" alt="sign-up-dekstop">
       </div>
       <!--- Sign-up form end -->
 
       <!-- Success message start -->
 
-      <div class="hidden">
-        <h1>
-          Thanks for subscribing!
-        </h1>
-        <p>
-          A confirmation email has been sent to ash@loremcompany.com. 
-          Please open it and click the button inside to confirm your subscription.
-        </p>
-        <button id="subscribeButton">
+      <div id ="success" class="hidden">
+        
+        <div class="subscribeMessageContainer">
+          <img src="assets/images/icon-success.svg" alt="success" class="succesImage">
+          <h1 class="successHeader">
+            Thanks for subscribing!
+          </h1>
+          <p id="successMessage" class="successP">
+          </p>
+        </div>
+        <button id="disButton" class="button">
           Dismiss message
         </button>
       </section>

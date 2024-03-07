@@ -2,7 +2,7 @@
 
 :root {
 
-    --Toamto: hsl(4, 100%, 67%);
+    --Tomato: hsl(4, 100%, 67%);
 
     --Dark-Slate-Grey: hsl(234, 29%, 20%);
     --Charcoal-Grey: hsl(235, 18%, 26%);
@@ -45,7 +45,6 @@ main {
     display: flex; 
 
     justify-content: center;
-    align-items: center;
 
     background-color: var(--White);
     padding: 30px;
@@ -98,6 +97,17 @@ input {
     font-size: 22px;
 }
 
+picture { 
+    width: 100%;
+}
+
+.inputError {
+
+    background-color: hsl(5, 100%, 95%);
+    border-color: var(--Tomato);
+    color: var(--Tomato);
+}
+
 
 .content {
 
@@ -105,7 +115,6 @@ input {
 
     background-color: var(--White);
 
-    height: 100%;
 }
 
 .hidden {
@@ -136,7 +145,7 @@ input {
 
 
 .emailHeader {
-    font-size: 0.65em;
+    font-size: 0.75em;
 }
 
 .signUpContainer {
@@ -154,12 +163,60 @@ input {
 }
 
 .errorColor {
-    color: var(--Toamto);
+    color: var(--Tomato);
 }
 
 .emailContainer {
     display: flex; 
     justify-content: space-between;
+}
+
+.successHeader {
+    font-size: 2.5em;
+    max-width: 450px;
+}
+
+.successContainer {
+    display: flex; 
+    flex-direction: column;
+
+    padding: 10px;
+
+    gap: 20px;
+}
+
+.succesImage {
+    width: 64px;
+    height: 64px;
+}
+
+.successP {
+    max-width: 450px;
+}
+
+.subscribeMessageContainer {
+
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px;
+}
+
+.button {
+
+    font-size: 22px;
+    margin-top: 5px;
+}
+
+.button:hover {
+
+    cursor: pointer;
+
+    background: radial-gradient(ellipse at center, hsl(347, 100%, 66%), hsl(10, 79%, 65%));
+}
+
+.pictureContainer {
+    display: flex; 
+    justify-content: center;
 }
 
 
@@ -172,6 +229,10 @@ input {
     .signUpHeaderSize {
         font-size: 2em;
     } 
+
+    .button {
+        font-size: 18px;
+    }
 }
 
 @media screen and (min-width: 800px) {
@@ -183,4 +244,51 @@ input {
     .signUpHeaderSize {
         font-size: 4em;
     } 
+
+    main {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    body {
+        height: 100%;
+        background-color: white;
+    }
+    .content {
+
+        display: flex; 
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .signUp {
+        gap: 20px;
+    }
+
+    main {
+        padding: 0px;
+        margin: 0px;
+        height: 100vh;
+    }
+
+    .signUpImage {
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+
+        max-width: 100%;
+    }
+
+    .signUp {
+        padding: 20px;
+    }
+
+    .successContainer {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        margin-top: 30%;
+        padding: 10px;
+    }
 }
